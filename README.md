@@ -1,16 +1,32 @@
-# React + Vite
+# React E-Commerce Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive frontend-only e-commerce application built with React.js and Tailwind CSS. Users can view products, search/filter items, manage a shopping cart, and persist data across sessions.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Core Features
+- **Product Listing:** View a grid of products with images, names, and prices.
+- **Shopping Cart:** Add/Remove items, view summary, and total calculation.
+- **Data Persistence:** Cart data is saved in `localStorage`, so items remain after refreshing.
+- **Navigation:** SPA navigation using React Router (Home / Cart).
+- **Responsive Design:** Fully mobile-responsive layout.
 
-## React Compiler
+### ✨ Bonus Features Implemented
+- **Quantity Selector:** Increase or decrease item quantity directly in the cart.
+- **Empty Cart Action:** One-click button to clear all items.
+- **Product Search:** Real-time filtering of products on the homepage.
+- **UI Animations:** Hover effects on cards, bounce animation on cart badge, and active state transforms on buttons.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Technologies Used
+- **React.js (Vite):** Core framework.
+- **Tailwind CSS:** For styling and responsive design.
+- **React Router DOM:** For page navigation.
+- **Context API:** For global state management (Cart Logic).
+- **Lucide React:** For modern icons.
 
-## Expanding the ESLint configuration
+## 📦 Installation & Setup
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. **Clone the repository:**
+   ```bash
+   git clone <repository-url>
+   cd ecommerce-app

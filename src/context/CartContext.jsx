@@ -1,6 +1,13 @@
-import { useState, useEffect } from 'react';
-import { CartContext } from './CartContextCreate';
+import { createContext, useContext, useState, useEffect } from 'react';
 
+// 1. Create the Context
+const CartContext = createContext();
+
+// 2. Export the Custom Hook
+// eslint-disable-next-line react-refresh/only-export-components
+export const useCart = () => useContext(CartContext);
+
+// 3. The Provider Component
 export const CartProvider = ({ children }) => {
   // Initialize from LocalStorage
   const [cart, setCart] = useState(() => {
@@ -29,7 +36,6 @@ export const CartProvider = ({ children }) => {
     setCart((prev) => prev.filter((item) => item.id !== id));
   };
 
-  // Bonus: Quantity Selector
   const updateQuantity = (id, amount) => {
     setCart((prev) =>
       prev.map((item) => {
@@ -41,7 +47,6 @@ export const CartProvider = ({ children }) => {
     );
   };
 
-  // Bonus: Empty Cart
   const clearCart = () => setCart([]);
 
   const total = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);

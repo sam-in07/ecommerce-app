@@ -1,5 +1,5 @@
-import { createContext, useState, useEffect } from 'react';
-import { CartContext } from './CartContextDefinition';
+import { useState, useEffect } from 'react';
+import { CartContext } from './CartContextCreate';
 
 export const CartProvider = ({ children }) => {
   // Initialize from LocalStorage
